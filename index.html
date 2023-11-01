@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="./Home_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <title>ホーム</title>
+    <link rel="icon" href="./img/home-icon.png">
+    <!-- OGP -->
+    <meta property='og:type' content='website'>
+    <meta property='og:title' content='Reno Web'>
+    <meta property='og:url' content='https://reno01111.github.io/HomePage/'>
+    <meta property='og:description' content='Renoのホームページです。'>
+    <meta property="og:image" content="./home_img/hp_ogp.png">
+    <meta name="description" content="Renoのホームページサイトです" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <!-- jQuery -->
+    <script>
+        jQuery(document).ready(function() {
+        var offset = 100;
+        var duration = 200;
+        jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+        jQuery('.pagetop').fadeIn(duration);
+        } else {
+        jQuery('.pagetop').fadeOut(duration);
+        }
+        });
+        
+        jQuery('.pagetop').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+        })
+        });
+    </script>
+</head>
+<body>
+    <!-- トップに戻るボタン -->
+    <div class="pagetop">↑</div>
+    
+    <!-- ヘッター -->
+    <header id="header">
+        <h1 class="site-title">
+            <a href="">
+                Reno Web
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="https://github.com/reno01111" target="_blank">
+                        <img src="./home_img/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メイン画像 -->
+    <div id="main">
+        <picture> <!-- 最初に見える画像指定 -->
+            <source media="(max-width: 600px)" srcset="./home_img/main-picture.jpg">
+            <img src="./home_img/main-picture.jpg" alt="">
+        </picture>
+        <p>著作者：<u><a href="https://jp.freepik.com/author/tawatchai07">tawatchai07</a></u>／出典：Freepik</p>
+    </div>
+
+    <!-- アバウト -->
+    <section id="about" class="wrapper">
+        <h2 class="sec-title">About</h2>
+        <ul>
+            <li>れの</li>
+            <li>気分でいろんなことをしています。</li>
+            <li class="cont-rink">
+                <a href="#contact"><u>お問い合わせフォームはこちらから</u></a>
+            </li>
+        </ul>
+        <p>趣味で動画を作ったりプログラミングをしたりしています。</p>
+    </section>
+
+          <!-- ニュース -->
+          <section id="news" class="wrapper">
+            <h2 class="sec-title">News</h2>
+            <dl>
+                <dt>2023/10/27</dt>
+                <dd>サイトをリリースしました</dd>
+                <dt>2023/10/27</dt>
+                <dd>サイトを限定リリースしました</dd>
+                <dt>2023/10/27</dt>
+                <dd>サーバーでの試運転を開始しました</dd>
+                <dt>2023/10/27</dt>
+                <dd>基盤が完成しました</dd>
+                <dt>2023/10/27</dt>
+                <dd>サイトの作成を開始しました</dd>
+            </dl>
+        </section>
+
+    <!-- ワークス -->
+    <section id="works" class="wrapper">
+        <h2 class="sec-title">Works</h2>
+        <ul>
+            <li><a href='./portfolio.html'><img src="./home_img/ポートフォリオ.png" alt="works1"></a></li>
+            <li><a href="./404.html"><img src="./home_img/未実装.png" alt="works1"></a></li>
+            <li><a href="./404.html"><img src="./home_img/未実装.png" alt="works1"></a></li>
+            <li><a href="./404.html"><img src="./home_img/未実装.png" alt="works1"></a></li>
+            <li><a href="./404.html"><img src="./home_img/未実装.png" alt="works1"></a></li>
+            <li><a href="./404.html"><img src="./home_img/未実装.png" alt="works1"></a></li>
+        </ul>
+    </section>
+
+     <!-- コンタクト -->
+     <section id="contact" class="wrapper">
+        <h2 class="sec-title">Contact</h2>
+        <p>お問い合わせは以下のフォームからお願いします</p>
+            <a href="https://forms.gle/zwBy4RGGbre2hbrb8" target="_blank" rel="noopener noreferrer"><div class="button"><input type="submit" value="フォームに移動"></div></a>
+        </form>    
+    </section>
+
+    <!-- QRimg -->
+    <div class="QRimg">
+    <section>
+        <img src="./home_img/QR.png" alt="">
+    </section>
+    </div>
+
+    <!--  フッター -->
+    <footer class="footer">
+        <ul class="md-flex">
+          <li><a href="#about">About</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./policy.html">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">2023 Reno. All Rights Reserved.</p>
+      </footer>
+</body>
+</html>
